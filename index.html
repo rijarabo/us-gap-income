@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <link rel='icon' type='image/ico' href='data/icon.ico'>
+  <title> Gender gap: Income </title>
+  <meta name='description' content='Gender gap: Income'>
+  <meta name='author' content='RIGEL JARABO'>
+
+  <!-- LOAD bootstrap CSS -->
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ' crossorigin='anonymous'>
+  <!-- LOAD STYLE CSS -->
+  <link rel='stylesheet' href='css/styles.css'>
+  <!-- LOAD STYLE LEAFLET MAP (USING LEAFLET FROM A CDN http://leafletjs.com/download.html ) -->
+  <link rel='stylesheet' href='https://unpkg.com/leaflet@1.3.1/dist/leaflet.css'
+  integrity='sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=='
+  crossorigin=''/>
+  <!-- LOAD Font Awesome -->
+  <script defer src='https://use.fontawesome.com/releases/v5.0.8/js/all.js'></script>
+</head>
+
+<body>
+  <div id='container'>
+    <h1> Gender gap: Income</h1>
+  </div>
+
+
+  <div id='legend'>
+    <h1>Legend</h1>
+    <p>
+      <i class="fas fa-square" style= 'color:#CC2895'></i>
+      <i class="fas fa-square" style= 'color:#D657AC'></i>
+      <i class="fas fa-square" style= 'color:#F47ACC'></i>
+      <i class="fas fa-square" style= 'color:#FF99DD'></i> <i class="fas fa-female"style= 'color:#000000'></i> earn the same or more than <i class="fas fa-male"style= 'color:#000000'></i> </br>
+
+      <i class="fas fa-square" style= 'color:#18D67D'></i>
+      <i class="fas fa-square" style= 'color:#30C88A'></i>
+      <i class="fas fa-square" style= 'color:#49BA97'></i>
+      <i class="fas fa-square" style= 'color:#4CB29B'></i> <i class="fas fa-female"style= 'color:#000000'></i> earn 90% to 60% the median income of <i class="fas fa-male"style= 'color:#000000'></i></br>
+
+      <i class="fas fa-square" style= 'color:#197FB2'></i>
+      <i class="fas fa-square" style= 'color:#3654AD'></i>
+      <i class="fas fa-square" style= 'color:#2B26B7'></i>
+      <i class="fas fa-square" style= 'color:#1C1966'></i> <i class="fas fa-female"style= 'color:#000000'></i> earn 50% to 20% the median income of <i class="fas fa-male"style= 'color:#000000'></i></br>
+      <span style='color:#C0C0C0'>_ _ </span> State border </br>
+      <i class="fas fa-square" style= 'color:#C0C0C0'></i> No data </br> </br>
+      <button id=resetButton> Reset Zoom </button>
+    </p>
+  </div>
+
+
+  <footer>
+    <p > Data: 2012-2016 American Community Survey 5-Year Estimates. Median Income in the past 12 months (in 2016 inflation-adjusted dollars) by sex in the past 12 months for the population 15 years and over with income.
+    </footer>
+
+  <div id='my-map'>  </div>
+
+
+
+  <!-- LOAD bootstrap and jquery-->
+      <script src='https://code.jquery.com/jquery-3.1.1.slim.min.js' integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n' crossorigin='anonymous'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js' integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb' crossorigin='anonymous'></script>
+      <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js' integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn' crossorigin='anonymous'></script>
+
+</body>
+
+<!-- LOAD Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Delius+Swash+Caps" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+<!-- LOAD leaflet script -->
+      <script src='https://unpkg.com/leaflet@1.3.1/dist/leaflet.js'
+      integrity='sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=='
+      crossorigin=''></script>
+
+ <!-- LOAD DATA -->
+      <script src='data/gap_var.js'></script>
+      <script src='data/state_var.js'></script>
+
+ <!-- LOAD JS script -->
+      <script src="js/map.js"></script>
+      <script src='js/draggable.js'></script>
+
+</html>
